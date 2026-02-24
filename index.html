@@ -2,24 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Official Credential Verification Record</title>
+<title>Institutional Credential Registry</title>
 
 <style>
 body {
     font-family: Georgia, "Times New Roman", serif;
-    background-color: #f2f4f7;
+    background-color: #f3f5f7;
     margin: 0;
     padding: 0;
 }
 
-.top-bar {
-    background-color: #0c2d57;
-    height: 6px;
-}
-
 .header {
     text-align: center;
-    padding: 40px 20px 20px 20px;
+    padding: 60px 20px 20px 20px;
 }
 
 .header h1 {
@@ -27,132 +22,86 @@ body {
     margin-bottom: 5px;
 }
 
-.header p {
-    font-size: 14px;
-    color: #444;
-    margin: 0;
-}
-
 .divider {
-    width: 120px;
+    width: 100px;
     height: 2px;
     background-color: #0c2d57;
     margin: 20px auto;
 }
 
 .container {
-    max-width: 820px;
+    max-width: 600px;
     margin: 40px auto;
     background: white;
     padding: 60px;
-    box-shadow: 0 0 18px rgba(0,0,0,0.06);
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 20px;
-    margin-bottom: 40px;
-}
-
-.name {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 25px 0;
-}
-
-.text {
-    text-align: center;
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.code {
-    text-align: center;
+input {
+    width: 80%;
+    padding: 10px;
     font-family: monospace;
-    font-size: 14px;
-    margin-top: 30px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
 }
 
-.meta {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 14px;
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #0c2d57;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.seal {
-    margin-top: 40px;
-    text-align: center;
-    font-size: 12px;
-    border: 1px solid #0c2d57;
-    display: inline-block;
-    padding: 15px 25px;
-    letter-spacing: 1px;
+button:hover {
+    opacity: 0.9;
 }
 
-.footer {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 12px;
-    color: #555;
+.note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666;
 }
 </style>
-
 </head>
 
 <body>
 
-<div class="top-bar"></div>
-
 <div class="header">
-    <h1>Credential Validation Registry</h1>
-    <p>Institutional Digital Verification Portal</p>
+    <h1>Institutional Credential Registry</h1>
     <div class="divider"></div>
 </div>
 
 <div class="container">
 
-    <div class="section-title">
-        Official Credential Verification Record
-    </div>
+    <p>
+        Enter a valid 32-character hexadecimal verification code.
+    </p>
 
-    <div class="text">
-        This registry confirms that
-    </div>
+    <input type="text" id="codeInput" maxlength="32" placeholder="Enter verification code">
 
-    <div class="name">
-        Matías Arambillet
-    </div>
+    <br>
 
-    <div class="text">
-        has been formally recorded within the institutional digital credential registry system under archival compliance protocol.
-    </div>
+    <button onclick="verifyCode()">Verify</button>
 
-    <div class="code">
-        Registry Reference Code:<br>
-        9F3A7C6E1B4D8A52E0C19F7B3D6A4E8C
-    </div>
-
-    <div class="meta">
-        Registry Archive Number: AR-UR-78421<br>
-        Internal Validation Sequence: IVS-32917
-    </div>
-
-    <div class="meta">
-        ✔ Credential Status: Verified and Active
-    </div>
-
-    <div style="text-align:center;">
-        <div class="seal">
-            DIGITAL REGISTRY AUTHENTICATION MARK
-        </div>
-    </div>
-
-    <div class="footer">
-        This verification record is maintained within the independent institutional registry framework.
+    <div class="note">
+        Only officially registered records will return a result.
     </div>
 
 </div>
+
+<script>
+function verifyCode() {
+    var code = document.getElementById("codeInput").value.trim();
+    if(code.length === 32) {
+        window.location.href = code + ".html";
+    } else {
+        alert("Invalid verification code format.");
+    }
+}
+</script>
 
 </body>
 </html>
