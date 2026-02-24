@@ -2,122 +2,69 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Credential Validation Registry</title>
+<title>Institutional Credential Registry</title>
 
 <style>
 body {
-    font-family: "Times New Roman", serif;
+    font-family: Georgia, "Times New Roman", serif;
     background-color: #f3f5f7;
     margin: 0;
     padding: 0;
 }
 
 .header {
-    background-color: #0b2e59;
-    color: white;
-    padding: 30px;
     text-align: center;
+    padding: 60px 20px 20px 20px;
 }
 
 .header h1 {
-    margin: 0;
     font-size: 26px;
-    letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
-.header p {
-    margin: 5px 0 0 0;
-    font-size: 14px;
+.divider {
+    width: 100px;
+    height: 2px;
+    background-color: #0c2d57;
+    margin: 20px auto;
 }
 
 .container {
-    max-width: 800px;
-    margin: 60px auto;
+    max-width: 700px;
+    margin: 40px auto;
     background: white;
     padding: 60px;
-    box-shadow: 0 0 18px rgba(0,0,0,0.08);
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
-h2 {
-    text-align: center;
-    font-weight: normal;
-    margin-bottom: 40px;
-}
-
-.name {
-    text-align: center;
-    font-size: 28px;
-    font-weight: bold;
-    margin: 25px 0;
-}
-
-.code {
-    text-align: center;
+.code-box {
+    margin-top: 30px;
     font-family: monospace;
     font-size: 14px;
-    margin-top: 15px;
-}
-
-.status {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-.footer {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 12px;
-    color: #555;
+    padding: 12px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    background-color: #f9f9f9;
 }
 </style>
-
 </head>
 
 <body>
 
 <div class="header">
-    <h1>Credential Validation Registry</h1>
-    <p>Public Academic Verification Portal – Montevideo, Uruguay</p>
+    <h1>Institutional Credential Registry</h1>
+    <div class="divider"></div>
 </div>
 
 <div class="container">
-
-    <h2>Official Credential Verification Record</h2>
-
-    <p style="text-align:center;">
-        This registry confirms that
+    <p>
+        This portal provides archival verification of officially registered credential records.
     </p>
 
-    <div class="name">
-        Matías Arambillet
+    <div class="code-box">
+        Verification requires a valid 32-character hexadecimal reference code.
     </div>
-
-    <p style="text-align:center;">
-        has been formally registered within the institutional credential validation system in accordance with academic documentation standards.
-    </p>
-
-    <div class="code">
-        Registry Reference Code: 9F3A7C6E1B4D8A52E0C19F7B3D6A4E8C
-    </div>
-
-    <div class="status">
-        ✔ Credential Status: Verified and Active
-    </div>
-
-    <div class="status">
-        Date of Record Validation:
-        <script>
-            document.write(new Date().toLocaleDateString());
-        </script>
-    </div>
-
-    <div class="footer">
-        This verification record is maintained under archival compliance protocols and institutional registry standards.<br>
-        Credential Validation Registry – Montevideo, Uruguay<br>
-        © 2026
-    </div>
-
 </div>
 
 </body>
