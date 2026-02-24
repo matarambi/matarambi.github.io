@@ -2,19 +2,24 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Institutional Credential Registry</title>
+<title>Official Credential Verification Record</title>
 
 <style>
 body {
     font-family: Georgia, "Times New Roman", serif;
-    background-color: #f3f5f7;
+    background-color: #f2f4f7;
     margin: 0;
     padding: 0;
 }
 
+.top-bar {
+    background-color: #0c2d57;
+    height: 6px;
+}
+
 .header {
     text-align: center;
-    padding: 60px 20px 20px 20px;
+    padding: 40px 20px 20px 20px;
 }
 
 .header h1 {
@@ -22,49 +27,131 @@ body {
     margin-bottom: 5px;
 }
 
+.header p {
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+}
+
 .divider {
-    width: 100px;
+    width: 120px;
     height: 2px;
     background-color: #0c2d57;
     margin: 20px auto;
 }
 
 .container {
-    max-width: 700px;
+    max-width: 820px;
     margin: 40px auto;
     background: white;
     padding: 60px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.05);
-    text-align: center;
+    box-shadow: 0 0 18px rgba(0,0,0,0.06);
 }
 
-.code-box {
-    margin-top: 30px;
+.section-title {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.name {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 25px 0;
+}
+
+.text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.code {
+    text-align: center;
     font-family: monospace;
     font-size: 14px;
-    padding: 12px;
-    border: 1px solid #ccc;
+    margin-top: 30px;
+}
+
+.meta {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.seal {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #0c2d57;
     display: inline-block;
-    background-color: #f9f9f9;
+    padding: 15px 25px;
+    letter-spacing: 1px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 12px;
+    color: #555;
 }
 </style>
+
 </head>
 
 <body>
 
+<div class="top-bar"></div>
+
 <div class="header">
-    <h1>Institutional Credential Registry</h1>
+    <h1>Credential Validation Registry</h1>
+    <p>Institutional Digital Verification Portal</p>
     <div class="divider"></div>
 </div>
 
 <div class="container">
-    <p>
-        This portal provides archival verification of officially registered credential records.
-    </p>
 
-    <div class="code-box">
-        Verification requires a valid 32-character hexadecimal reference code.
+    <div class="section-title">
+        Official Credential Verification Record
     </div>
+
+    <div class="text">
+        This registry confirms that
+    </div>
+
+    <div class="name">
+        Matías Arambillet
+    </div>
+
+    <div class="text">
+        has been formally recorded within the institutional digital credential registry system under archival compliance protocol.
+    </div>
+
+    <div class="code">
+        Registry Reference Code:<br>
+        9F3A7C6E1B4D8A52E0C19F7B3D6A4E8C
+    </div>
+
+    <div class="meta">
+        Registry Archive Number: AR-UR-78421<br>
+        Internal Validation Sequence: IVS-32917
+    </div>
+
+    <div class="meta">
+        ✔ Credential Status: Verified and Active
+    </div>
+
+    <div style="text-align:center;">
+        <div class="seal">
+            DIGITAL REGISTRY AUTHENTICATION MARK
+        </div>
+    </div>
+
+    <div class="footer">
+        This verification record is maintained within the independent institutional registry framework.
+    </div>
+
 </div>
 
 </body>
